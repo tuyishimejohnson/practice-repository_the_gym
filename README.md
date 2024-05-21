@@ -760,5 +760,40 @@ yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym
 $
 
 
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git commit -m "Readme changes"
+[main 3e4179c] Readme changes
+ 3 files changed, 331 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git push
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (37/37), 8.59 KiB | 418.00 KiB/s, done.
+Total 37 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (16/16), done.
+To https://github.com/tuyishimejohnson/practice-repository_the_gym.git
+   08dce5b..3e4179c  main -> main
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.02 KiB | 69.00 KiB/s, done.
+From https://github.com/tuyishimejohnson/practice-repository_the_gym
+   3e4179c..cc6c818  main       -> origin/main
+Updating 3e4179c..cc6c818
+Fast-forward
+ README.md | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$
+
 
 <<<<< This is the end of everything that is in the output >>>>>
