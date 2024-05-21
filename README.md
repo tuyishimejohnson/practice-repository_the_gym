@@ -429,3 +429,332 @@ Date:   Tue May 21 12:23:09 2024 +0200
 
 yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
 $
+
+
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~4
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~3
+[detached HEAD c247a26] Create Third File
+ Date: Tue May 21 12:23:09 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ ls
+firstFile.css  firstFile.html  README.md  test1.md  test2.md  test3.md  test4.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log
+commit bd5a1250a546db20e0bf46d0f070f30e5f96f339 (HEAD -> main)
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 12:28:22 2024 +0200
+
+    Readme changes
+
+commit c247a265eaa1e29ae81c81eccb6f7bc288bb2326
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 12:23:09 2024 +0200
+
+    Create Third File
+
+    Create fourth file
+
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ touch unwanted.txt
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git add unwanted.txt 
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git commit -m "Unwanted commit"
+[main dd75969] Unwanted commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 unwanted.txt
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log
+commit dd75969af560f652356008c6ebc5279d3696d4eb (HEAD -> main)
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 12:39:03 2024 +0200
+
+    Unwanted commit
+
+commit bd5a1250a546db20e0bf46d0f070f30e5f96f339
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 12:28:22 2024 +0200
+
+    Readme changes
+
+commit c247a265eaa1e29ae81c81eccb6f7bc288bb2326
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+pick eeb289f Readme changes
+$ git rebase -i HEAD~
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+pick bd5a125 Readme changes
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git add README.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git commit -m "Readme changes"
+[main eeb289f] Readme changes
+ 1 file changed, 237 insertions(+)
+
+pick c247a26 Create Third File
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~
+Successfully rebased and updated refs/heads/main.
+
+pick 980b33b Test 2
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ ls
+firstFile.css  firstFile.html  README.md  test1.md  test2.md  test3.md  test4.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git rebase -i HEAD~6
+Successfully rebased and updated refs/heads/main.
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ ls 
+firstFile.css  firstFile.html  README.md  test1.md  test2.md  test3.md  test4.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch
+* main
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch ft/branch
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch
+  ft/branch
+* main
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git checkout ft/branch 
+Switched to branch 'ft/branch'
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/branch)
+$ touch test5.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/branch)
+$ git add test5.md 
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/branch)
+$ git commit -m "Implemented test 5"
+[ft/branch b547548] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/branch)
+$ git log
+commit b5475484d4a8e7262f5b0e5a136161672005d42c (HEAD -> ft/branch)
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 22:17:40 2024 +0200
+
+    Implemented test 5
+
+commit 77707846e5e278f6c1e17f983652ce98aa0f8e0a (main)
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git cherry-pick b547548
+[main 7121736] Implemented test 5
+ Date: Tue May 21 22:17:40 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log
+commit 7121736898629b3afbfae6ee55121458e964c71a (HEAD -> main)
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 22:17:40 2024 +0200
+
+    Implemented test 5
+
+commit 77707846e5e278f6c1e17f983652ce98aa0f8e0a
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log --graph
+* commit 7121736898629b3afbfae6ee55121458e964c71a (HEAD -> main)
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Tue May 21 22:17:40 2024 +0200
+|
+|     Implemented test 5
+|
+* commit 77707846e5e278f6c1e17f983652ce98aa0f8e0a
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Tue May 21 12:42:51 2024 +0200
+|
+|     Readme changes
+|
+* commit bd5a1250a546db20e0bf46d0f070f30e5f96f339
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Tue May 21 12:28:22 2024 +0200
+|
+|     Readme changes
+|
+* commit c247a265eaa1e29ae81c81eccb6f7bc288bb2326
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Tue May 21 12:23:09 2024 +0200
+|
+|     Create Third File
+|
+|     Create fourth file
+|
+* commit 428d26891c4e25b1a7fdb710942b4c9a26db2e6e
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Tue May 21 11:08:55 2024 +0200
+|
+|     Outputs from git commands
+|
+* commit a82985d6f89596286b4cbfb3eb816ca137b969d1
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Mon May 20 18:09:28 2024 +0200
+|
+|     Readme
+|
+* commit 980b33b9e144d83673f3e9d7f462b98fcc19830a
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Mon May 20 17:37:16 2024 +0200
+|
+|     Test 2
+|
+* commit cf9a0e5eee74b4705f0e8fec95f1efe06644af16
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Mon May 20 17:36:37 2024 +0200
+|
+|     chore: Create second file
+|
+* commit 43e3c1116459fd85fd0caeca9119949cd231b47c
+| Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+| Date:   Mon May 20 17:35:11 2024 +0200
+|
+|     chore: Create initial file
+|
+|     chore: Create another file
+|
+|     Combination of two commits
+|
+* commit 08dce5b711a664d342976ed262354f02c36dfb61 (origin/main, origin/HEAD)
+  Author: Tuyishime Noe Johnson <116555479+tuyishimejohnson@users.noreply.github.com>
+  Date:   Mon May 20 17:24:00 2024 +0200
+
+      Initial commit
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (ft/new-feature)
+$
+
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch
+  ft/branch
+  ft/new-branch-from-commit
+* main
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git branch
+  ft/branch
+  ft/improved-branch-name
+* main
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log --oneline
+2abefda (HEAD -> main, ft/improved-branch-name) Merge branch 'ft/new-feature'
+f4117a4 Updated project readme
+05eff70 Implemented core functionality for new feature
+7121736 Implemented test 5
+7770784 Readme changes
+bd5a125 Readme changes
+c247a26 Create Third File
+428d268 Outputs from git commands
+a82985d Readme
+980b33b Test 2
+cf9a0e5 chore: Create second file
+43e3c11 chore: Create initial file
+08dce5b (origin/main, origin/HEAD) Initial commit
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git log
+commit 2abefdac4308bd18db440a4f6a72710d0e55d1d6 (HEAD -> main, ft/improved-branch-name)
+Merge: f4117a4 05eff70
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 22:51:53 2024 +0200
+
+    Merge branch 'ft/new-feature'
+
+commit f4117a44ef3ef7ee4da23037862ea2580cbc7c3e
+Author: tuyishime johnson <j.tuyishime4@alustudent.com>
+Date:   Tue May 21 22:44:48 2024 +0200
+
+    Updated project readme
+
+commit 05eff70590e70a2adf7530da475678afa5c9d65e
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$ git checkout 2abefda
+M       README.md
+M       readme.txt
+Note: switching to '2abefda'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 2abefda Merge branch 'ft/new-feature'
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym ((2abefda...))
+$
+
+$ git tag v1.0 f4117a4
+fatal: tag 'v1.0' already exists
+
+yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
+$
