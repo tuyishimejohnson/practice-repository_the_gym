@@ -1,6 +1,6 @@
 # practice-repository_the_gym
 
-
+<<<<< This is the start of everything that is in the output >>>>>
 
 yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
 $ git rebase -HEAD~2
@@ -758,3 +758,7 @@ fatal: tag 'v1.0' already exists
 
 yiish@DESKTOP-MFHFU23 MINGW64 ~/Documents/MYPROJECTS/practice-repository_the_gym (main)
 $
+
+
+
+<<<<< This is the end of everything that is in the output >>>>>
